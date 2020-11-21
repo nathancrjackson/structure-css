@@ -1,0 +1,31 @@
+// Queries and breakpoints borrowed from Foundation https://get.foundation/sites/docs/media-queries.html
+
+// Small only - @media screen and (max-width: $small-max) {}
+// Medium and up - @media screen and (min-width: $medium-min) {}
+// Medium only - @media screen and (min-width: $medium-min) and (max-width: $medium-max) {}
+// Medium and below - @media screen and (max-width: $medium-max) {}
+// Large and up - @media screen and (min-width: $large-min) {}
+// Large only - @media screen and (min-width: $large-min) and (max-width: $large-max) {}
+// Large and below - @media screen and (max-width: $large-max) {}
+// Extra large - @media screen and (min-width: $xlarge-min) {}
+
+//Breakpoint "in pixels" 
+$small2medium: 640;
+$medium2large: 1024;
+$large2xlarge: 1200;
+
+@function px2em($pixels) {
+	$ratio: 16;
+ 	@return $pixels / $ratio * 1em;
+}
+
+$small-min: 0em;
+$small-max: px2em($small2medium - 1);
+
+$medium-min: px2em($small2medium);
+$medium-max: px2em($medium2large - 1);
+
+$large-min: px2em($medium2large);
+$large-max: px2em($large2xlarge - 1);
+
+$xlarge-min: px2em($large2xlarge);
