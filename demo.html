@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Structure.CSS Demo Site</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/structure.css">
+</head>
+<body>
+	<div class="body-blck">
+		<div class="body-cont" id="header">
+			<h1>Structure.CSS Demo Site</h1>
+		</div>
+	</div>
+	<div class="body-blck">
+		<div class="body-cont">
+			<nav>
+				<ul class="rnav">
+					<li class="active">Demo</li>
+					<li><a href="https://njit.io/">Latest Posts</a></li>
+					<li><a href="https://njit.io/about-me/">About</a></li>
+					<li class="disabled">Contact</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="body-blck">
+		<div class="body-cont">
+			<p>This website is an example of how structure is rendered. Yes I am aware it looks terrible, it has no custom CSS. You will need to bring to BYO jazz for your own site. If you have dark mode enabled in your browser you should be noticing that support for that is baked in.</p>
+			<h2>Being basic is the aim of the game</h2>
+			<p>There's not really much to say, it's a simple framework for me to get websites up and running quickly. This demo was more basic but my wife took a cheeky peak at it and made fun of it so now this is what you get.</p>
+			<h3>We also do grids</h3>
+			<p>By default our grid container is the standard 12 wide grid we see in most systems. There is a 10 wide option but as 12 works better for this demo here that is:</p>
+			<div class="gd-cont">
+				<div class="gd-m6 gd-l4">
+					<p><span class="only-s">12/12 grid span for small</span><span class="only-m">6/12 grid span for medium</span><span class="only-l">4/12 grid span for large</span></p>
+				</div>
+				<div class="gd-m6 gd-l4">
+					<p><span class="only-s">12/12 grid span for small</span><span class="only-m">6/12 grid span for medium</span><span class="only-l">4/12 grid span for large</span></p>
+				</div>
+				<div class="gd-m6 gd-l4">
+					<p><span class="only-s">12/12 grid span for small</span><span class="only-m">6/12 grid span for medium</span><span class="only-l">4/12 grid span for large</span></p>
+				</div>
+			</div>
+			<h3>Do you use tables often?</h3>
+			<p>Neither do I, but occasionally I still do. With that in mind here is an example table that collapses down on small screeens:</p>
+			<table class="collapsable">
+				<tr class="hide-s">
+					<th>Name</th>
+					<th>Date</th>
+					<th>Size</th>
+				</tr>
+				<tr>
+					<td class="bold-s">Ubuntu Server.iso</td>
+					<td>0.9GB</td>
+					<td class="hide-s">20XX-04-01 09:41:43</td>
+				</tr>
+				<tr>
+					<td class="bold-s">Windows 10.iso</td>
+					<td>4.6GB</td>
+					<td class="hide-s">20XX-09-01 09:41:39</td>
+				</tr>
+				<tr>
+					<td class="bold-s">ISO to USB.exe</td>
+					<td>1.0MB</td>
+					<td class="hide-s">20XX-10-13 06:17:23</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

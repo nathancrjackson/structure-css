@@ -1,0 +1,152 @@
+@import "libs/normalize.min";
+
+/*! Structure.CSS start */
+$font-stack: Helvetica, sans-serif;
+$dark-color: #222;
+$light-color: #f2f2f2;
+
+$primary-color: #3598E8;
+$highlight-color: #47DEFF;
+$disabled-color: #888888;
+
+$lightmode-fg: $dark-color;
+$lightmode-bg: $light-color;
+$darkmode-fg: $light-color;
+$darkmode-bg: $dark-color;
+
+//Lingo Notes
+//---
+//blck	- Block
+//cont	- Container
+//gd	- Grid
+//s		- Small 
+//m		- Medium
+//l		- Large
+//xl	- Extra large
+
+// For more info on queries see the following file:
+@import "queries";
+
+body {
+	font: 100% $font-stack;
+
+	/* Light Mode */
+	color: $lightmode-fg;
+	background-color: $lightmode-bg;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+		color: $darkmode-fg;
+		background-color: $darkmode-bg;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	padding: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.75em 0em 0em 0em;
+}
+
+p {
+	margin: 0em;
+}
+
+a {
+	color: $primary-color;
+}
+
+a:hover {
+	//text-shadow: 1px 1px $highlight-color;
+	color: $highlight-color;
+}
+
+*.active {
+	color: $highlight-color;
+}
+
+*.active a {
+	color: $highlight-color;
+}
+
+*.active a:hover {
+	//text-shadow: none;
+	color: $highlight-color;
+}
+
+*.disabled {
+	color: $disabled-color;
+}
+
+*.disabled a {
+	color: $disabled-color;
+}
+
+*.disabled a:hover {
+	//text-shadow: none;
+	color: $disabled-color;
+}
+
+table {
+	width: 100%;
+	padding: 0.5em;
+}
+
+@media screen and (max-width: $small-max) {
+	table.collapsable tr, table.collapsable th, table.collapsable td {
+		display: block;
+	}
+}
+
+td, th {
+	padding: 0.25em 0em;
+}
+
+.body-blck {
+	width: 100%;
+	margin: 0;
+}
+
+.body-cont {
+	max-width: $medium-max;
+	margin: 0 auto;
+}
+
+.body-cont-full {
+	width: 100%;
+	margin: 0 auto;
+}
+
+ul.vnav, ul.hnav, ul.rnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+ul.vnav li, ul.rnav li {
+	padding: 0.8rem;
+}
+
+ul.hnav li {
+	padding: 0.8rem;
+	float: left;
+}
+
+@media screen and (min-width: $medium-min) {
+	ul.rnav li {
+		float: left;
+	}
+}
+
+ul.vnav li a, ul.hnav li a, ul.rnav li a {
+	display: block;
+	text-decoration: none;
+}
+
+//ul.vnav li a:hover, ul.hnav li a:hover, ul.rnav li a:hover {}
+
+@import "grids";
+@import "visibility";

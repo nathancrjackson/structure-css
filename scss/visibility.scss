@@ -1,0 +1,50 @@
+@import "queries";
+
+.hide {
+	display: none !important;
+}
+
+@media screen and (max-width: $small-max) {
+	.hide-s {
+		display: none !important;
+	}
+	.bold-s {
+		font-weight: bold;
+	}
+}
+
+@media screen and (min-width: $medium-min) and (max-width: $medium-max) {
+	.hide-m {
+		display: none !important;
+	}
+	.bold-m {
+		font-weight: bold;
+	}
+}
+
+@media screen and (min-width: $large-min) and (max-width: $large-max) {
+	.hide-l {
+		display: none !important;
+	}
+	.bold-l {
+		font-weight: bold;
+	}
+}
+
+@media screen and (min-width: $medium-min) {
+	.only-s {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: $small-max), screen and (min-width: $large-min) {
+	.only-m {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: $medium-max) {
+	.only-l {
+		display: none !important;
+	}
+}
