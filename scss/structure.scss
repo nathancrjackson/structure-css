@@ -1,18 +1,7 @@
 @import "libs/normalize.min";
 
 /*! Structure.CSS start */
-$font-stack: Helvetica, sans-serif;
-$dark-color: #222;
-$light-color: #f2f2f2;
-
-$primary-color: #3598E8;
-$highlight-color: #47DEFF;
-$disabled-color: #888888;
-
-$lightmode-fg: $dark-color;
-$lightmode-bg: $light-color;
-$darkmode-fg: $light-color;
-$darkmode-bg: $dark-color;
+@import "variables";
 
 //Lingo Notes
 //---
@@ -91,7 +80,8 @@ a:hover {
 
 table {
 	width: 100%;
-	padding: 0.5em;
+	//padding: $block-padding;
+	box-sizing: border-box;
 }
 
 @media screen and (max-width: $small-max) {
@@ -101,7 +91,7 @@ table {
 }
 
 td, th {
-	padding: 0.25em 0em;
+	padding: $block-padding;
 }
 
 .body-blck {
@@ -147,6 +137,64 @@ ul.vnav li a, ul.hnav li a, ul.rnav li a {
 }
 
 //ul.vnav li a:hover, ul.hnav li a:hover, ul.rnav li a:hover {}
+
+form {
+	width: 100%;
+	//padding: $block-padding;
+	box-sizing: border-box;
+}
+
+legend {
+	width: 100%;
+}
+
+input, select, textarea, optgroup {
+	box-sizing: border-box;
+	width: 100%;
+	padding: $block-padding;
+}
+
+option {
+	padding: $block-padding;
+}
+
+button, [type="button"], [type="reset"], [type="submit"], .button {
+	box-sizing: border-box;
+	display: inline-block;
+	width: auto;
+	padding: $block-padding;
+
+	color: $primary-color-text;
+	background-color: $primary-color;
+	border-style: none;
+
+	cursor: pointer;
+	text-decoration: none;
+}
+
+[type="checkbox"], [type="radio"] {
+	width: auto;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	display: inline-block;
+	padding: $block-padding;
+}
+
+[type="color"] {
+	background-color: $lightmode-bg;
+	box-sizing: content-box;
+	display: inline-block;
+	height: 2.3rem;
+	padding: 0;
+	border: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="color"] {
+		background-color: $darkmode-bg;
+    }
+}
 
 @import "grids";
 @import "visibility";
