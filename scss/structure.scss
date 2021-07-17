@@ -43,6 +43,28 @@ p {
 	margin: 0em;
 }
 
+pre {
+	display: block;
+	line-height: 1.25rem;
+	white-space: pre-wrap;
+	margin: 8px;
+	padding: 8px;
+	font-family: $pre-font-stack;
+	color: $darker-color;
+	background-color: $lighter-color;
+}
+
+.code {
+	border-left: 4px solid $primary-color;
+}
+
+@media (prefers-color-scheme: dark) {
+    pre {
+		color: $lighter-color;
+		background-color: $darker-color;
+    }
+}
+
 a {
 	color: $primary-color;
 }
@@ -152,6 +174,7 @@ input, select, textarea, optgroup {
 	box-sizing: border-box;
 	width: 100%;
 	padding: $block-padding;
+	margin-bottom: $block-padding;
 }
 
 option {
