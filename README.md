@@ -2,7 +2,7 @@
 
 _Because sometimes you just need a little bit of Structure_
 
-Structure.CSS is a very basic framework for simple websites. I wrote this for my own enjoyment and experience. I don't expect anyone else to use it, honestly it's probably for the best that they don't. If you are looking for something like this that is a little more polished [Skeleton](http://getskeleton.com) appears to be a pretty good choice. For a framework that has all the bells and whistles [Foundation](https://get.foundation/index.html) is what I've used in the past.
+Structure.CSS is a very basic framework for simple websites. I wrote this for my own enjoyment and experience. I don't expect anyone else to use it, honestly it's probably for the best that they don't. If you are looking for something like this that is a little more polished [PureCSS](https://purecss.io/) appears to be a pretty good choice. For a framework that has all the bells and whistles [Foundation](https://get.foundation/index.html) is what I've used in the past.
 
 ## Demo
 
