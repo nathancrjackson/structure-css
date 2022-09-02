@@ -18,15 +18,15 @@ Structure.CSS uses the following Lingo
 
 ### .body-blck
 
-Block that spans the width of its container that is intended to be used directly in the **<body>** element.
+Block that spans the width of its container that is intended to be used directly in the `<body>` element.
 
 ### .body-cont
 
-A container to be used within **.body-blck** that spans **$medium-max** wide.
+A container to be used within `.body-blck` that spans `$medium-max` wide.
 
 ### .body-cont-full
 
-A container to be used within **.body-blck** that spans the full width of **.body-blck**.
+A container to be used within `.body-blck` that spans the full width of `.body-blck`.
 
 ### Body blocks example
 
@@ -93,15 +93,15 @@ Where _x_ is the screen size and _y_ is the column width. Here is a table with a
 
 ### .hnav
 
-Apply this to a **<ul>** element to turn it into a horizontal navigation bar. Currently does not support nested menus.
+Apply this to a `<ul>` element to turn it into a horizontal navigation bar. Currently does not support nested menus.
 
 ### .vnav
 
-Apply this to a **<ul>** element to turn it into a vertical navigation bar. Currently does not support nested menus.
+Apply this to a `<ul>` element to turn it into a vertical navigation bar. Currently does not support nested menus.
 
 ### .rnav
 
-Apply this to a **<ul>** element to turn it into a responsive navigation bar. On small screens the layout will be vertical and on larger screens it will be horizontal. Currently does not support nested menus.
+Apply this to a `<ul>` element to turn it into a responsive navigation bar. On small screens the layout will be vertical and on larger screens it will be horizontal. Currently does not support nested menus.
 
 ### Navigation example
 
@@ -162,11 +162,11 @@ Make bold only on large screens
 
 ### .code
 
-Give a **<pre>** a bit more flair with a **$primary-color** line down the left hand side of it.
+Give a `<pre>` a bit more flair with a `$primary-color` line down the left hand side of it.
 
 ### .collapsable
 
-Apply this to a **<table>** element to make it collapsable.
+Apply this to a `<table>` element to make it collapsable.
 
 ### .disable-children-padding
 
@@ -202,7 +202,7 @@ Our main font stack for fonts
 #### $pre-font-stack
 _Default: 'Courier New', Courier, monospace;_
 
-Our font stack for **<pre>** elements
+Our font stack for `<pre>` elements
 
 #### $dark-color
 _Default: #222;_
@@ -252,7 +252,7 @@ The foreground color in light mode. i.e. Text color
 #### $lightmode-bg
 _Default: $light-color;_
 
-The background color in light mode. i.e. **<body>** background
+The background color in light mode. i.e. `<body>` background
 
 #### $darkmode-fg
 _Default: $light-color;_
@@ -262,7 +262,7 @@ The foreground color in dark mode. i.e. Text color
 #### $darkmode-bg
 _Default: $dark-color;_
 
-The background color in dark mode. i.e. **<body>** background
+The background color in dark mode. i.e. `<body>` background
 
 #### $block-padding
 _Default: 0.5em;_
@@ -286,4 +286,3 @@ The following is a list HTML elements this framework explicitly styles:
 - input, select, textarea, optgroup
 - option
 - button
-
