@@ -17,6 +17,9 @@ I'm currently hosting a copy of the demo.html site here: [https://njit.io/demo/s
 - Supports browser dark mode
 - ...is being basic a feature?
 
+## Documentation
+You can [view some basic documentation here](DOCS.md)
+
 ## Attributions
 
 - [normalize.css](https://github.com/necolas/normalize.css) has been used as a jumping off point.
