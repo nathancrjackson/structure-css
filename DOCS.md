@@ -168,9 +168,13 @@ Give a `<pre>` a bit more flair with a `$primary-color` line down the left hand 
 
 Apply this to a `<table>` element to make it collapsable.
 
+### .disable-padding
+
+Disables padding on applied element
+
 ### .disable-children-padding
 
-Disables padding in child objects
+Disables padding on the children of the applied element
 
 
 ## SCSS variables

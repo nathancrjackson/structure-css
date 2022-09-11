@@ -48,6 +48,10 @@ div.gd-l7, div.gd-l8, div.gd-l9, div.gd-l10, div.gd-l11, div.gd-l12 {
 	padding: 0.5rem;
 }
 
+.disable-padding {
+	padding: 0 !important;
+}
+
 .disable-children-padding > * {
 	padding: 0 !important;
 }
