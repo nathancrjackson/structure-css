@@ -47,24 +47,9 @@
 	padding: vars.$x5unit vars.$x6unit;
 }
 
-.decorated-table * > * > *
+table.no-table-border tr, table.no-table-border th, table.no-table-border td
 {
-    border: 1px solid vars.$dark-color;
-}
-.decorated-table * > *  > th
-{
-    border-bottom: 2px solid vars.$darker-color;
-}
-
-@media (prefers-color-scheme: dark) {
-    .decorated-table * > * > *
-    {
-        border: 1px solid vars.$light-color;
-    }
-    .decorated-table * > *  > th
-    {
-        border-bottom: 2px solid vars.$light-color;
-    }
+    border: 0 !important;
 }
 
 .hide {

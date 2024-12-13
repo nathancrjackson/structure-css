@@ -18,9 +18,9 @@ Make a button nice and chunky with padding
 
 Apply this to a `<table>` element to make it collapsable.
 
-### .decorated-table
+### .no-table-border
 
-Apply this to a `<table>` element to add borders to it.
+Apply this to a `<table>` element to remove base borders from it.
 
 ### .disabled
 
