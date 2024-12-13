@@ -62,15 +62,15 @@ Make text italic only on medium screens
 
 Make text italic only on large screens
 
-### .all-caps
+### .uppercase
 
 Make text all uppercase
 
-### .no-caps
+### .lowercase
 
 Make text all lowercase
 
-### .no-decoration
+### .no-text-decoration
 
 Remove text decoration
 

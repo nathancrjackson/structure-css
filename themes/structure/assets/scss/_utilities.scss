@@ -13,19 +13,19 @@
 	font-style: italic;
 }
 
-.all-caps
+.uppercase
 {
 	text-transform: uppercase;
 }
 
-.no-caps
+.lowercase
 {
 	text-transform: lowercase;
 }
 
-.no-decoration
+.no-text-decoration
 {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 .monospace
