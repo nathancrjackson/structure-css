@@ -1,0 +1,129 @@
+@use "vars";
+
+//start of if using utilities
+@if vars.$include-utilities == true {
+
+.bold
+{
+	font-weight: bold;
+}
+
+.italic
+{
+	font-style: italic;
+}
+
+.all-caps
+{
+	text-transform: uppercase;
+}
+
+.no-caps
+{
+	text-transform: lowercase;
+}
+
+.no-decoration
+{
+	text-decoration: none;
+}
+
+.monospace
+{
+	font-family: vars.$pre-font-stack;
+}
+
+.light-text
+{
+	color: vars.$light-color;
+}
+
+.dark-text
+{
+	color: vars.$dark-color;
+}
+
+.chunky-button {
+	padding: vars.$x5unit vars.$x6unit;
+}
+
+.decorated-table * > * > *
+{
+    border: 1px solid vars.$dark-color;
+}
+.decorated-table * > *  > th
+{
+    border-bottom: 2px solid vars.$darker-color;
+}
+
+@media (prefers-color-scheme: dark) {
+    .decorated-table * > * > *
+    {
+        border: 1px solid vars.$light-color;
+    }
+    .decorated-table * > *  > th
+    {
+        border-bottom: 2px solid vars.$light-color;
+    }
+}
+
+.hide {
+	display: none !important;
+}
+
+@media screen and (max-width: vars.$small-max) {
+	.hide-s {
+		display: none !important;
+	}
+	.bold-s {
+		font-weight: bold;
+	}
+	.italic-s {
+		font-style: italic;
+	}
+}
+
+@media screen and (min-width: vars.$medium-min) and (max-width: vars.$medium-max) {
+	.hide-m {
+		display: none !important;
+	}
+	.bold-m {
+		font-weight: bold;
+	}
+	.italic-m {
+		font-style: italic;
+	}
+}
+
+@media screen and (min-width: vars.$large-min) {
+	.hide-l {
+		display: none !important;
+	}
+	.bold-l {
+		font-weight: bold;
+	}
+	.italic-l {
+		font-style: italic;
+	}
+}
+
+@media screen and (min-width: vars.$medium-min) {
+	.only-s {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: vars.$small-max), screen and (min-width: vars.$large-min) {
+	.only-m {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: vars.$medium-max) {
+	.only-l {
+		display: none !important;
+	}
+}
+
+//end of if using utilities
+}

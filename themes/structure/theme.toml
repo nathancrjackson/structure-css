@@ -1,0 +1,13 @@
+name = 'Structure.CSS theme'
+description = 'Theme for Structure.CSS development'
+
+# Taxonomy terms
+# tags = ['blog', 'company']
+# features = ['some', 'awesome', 'features']
+
+# If the theme has a single author
+[author]
+  name = 'Nathan Jackson'
+  homepage = 'https://njit.io/projects/structure-css/'
+
+

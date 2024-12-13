@@ -1,2 +1,25 @@
+# Local Netlify folder
+.netlify
 
-*.config
+# Package Files
+node_modules/
+
+# Compiled site
+public/
+
+# Private notes
+private/
+
+# Private content not ready for upload
+content/private/
+
+# Automatically generated items
+resources/_gen/
+assets/jsconfig.json
+
+# Misc tidying
+**/Thumbs.db
+**/.DS_Store
+go.sum
+hugo_stats.json
+.hugo_build.lock

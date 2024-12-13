@@ -1,0 +1,237 @@
+@use "vars";
+
+// _base.scss
+// ----------
+// Includes all of the base element styling
+
+body {
+	font: 100% vars.$font-stack;
+
+	/* Light Mode */
+	color: vars.$lightmode-fg;
+	background-color: vars.$lightmode-bg;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+		color: vars.$darkmode-fg;
+		background-color: vars.$darkmode-bg;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: vars.$heading-margin;
+	padding: vars.$heading-margin;
+	width: vars.$heading-width;
+	line-height: vars.$line-height;
+}
+
+p {
+	margin: vars.$text-margin;
+	padding: vars.$text-margin;
+	width: vars.$text-width;
+	line-height: vars.$line-height;
+}
+
+pre {
+	display: block;
+	line-height: vars.$pre-line-height;
+	white-space: pre-wrap;
+	margin: vars.$pre-margin;
+	padding: vars.$pre-padding;
+	font-family: vars.$pre-font-stack;
+	color: vars.$pre-dark-color;
+	background-color: vars.$pre-light-color;
+	width: vars.$pre-width;
+}
+
+.code {
+	border-left: 4px solid vars.$primary-color;
+}
+
+@media (prefers-color-scheme: dark) {
+    pre {
+		color: vars.$pre-light-color;
+		background-color: vars.$pre-dark-color;
+    }
+}
+
+a {
+	color: vars.$primary-color;
+}
+
+a:hover {
+	//text-shadow: 1px 1px $highlight-color;
+	color: vars.$highlight-color;
+}
+
+*.active {
+	color: vars.$highlight-color;
+}
+
+*.active a {
+	color: vars.$highlight-color;
+}
+
+*.active a:hover {
+	//text-shadow: none;
+	color: vars.$highlight-color;
+}
+
+*.disabled {
+	color: vars.$disabled-color;
+}
+
+*.disabled a {
+	color: vars.$disabled-color;
+}
+
+*.disabled a:hover {
+	//text-shadow: none;
+	color: vars.$disabled-color;
+}
+
+table {
+	width: vars.$table-width;
+	box-sizing: border-box;
+	margin: vars.$table-margin;
+	padding: vars.$table-padding;
+	border-collapse: collapse;
+}
+
+@media screen and (max-width: vars.$small-max) {
+	table.collapsable tr, table.collapsable th, table.collapsable td {
+		display: block;
+	}
+}
+
+td, th {
+	//margin has no power here
+	padding: vars.$table-cell-padding;
+}
+
+.body-blck {
+	width: 100%;
+	margin: 0;
+}
+
+.body-cont {
+	max-width: vars.$medium-max;
+	margin: vars.$body-margin;
+}
+
+.body-cont-full {
+	width: 100%;
+	margin: vars.$body-margin;
+}
+
+ul.vnav, ul.hnav, ul.rnav {
+	margin: vars.$ul-margin;
+	padding: vars.$ul-padding;
+
+	list-style-type: none;
+	overflow: hidden;
+}
+
+ul.vnav li, ul.rnav li, ul.hnav li {
+	margin: vars.$li-margin;
+	padding: vars.$li-padding;
+}
+
+ul.hnav li {
+	float: left;
+}
+
+@media screen and (min-width: vars.$medium-min) {
+	ul.rnav li {
+		float: left;
+	}
+}
+
+ul.vnav li a, ul.hnav li a, ul.rnav li a {
+	display: block;
+	text-decoration: none;
+}
+
+//ul.vnav li a:hover, ul.hnav li a:hover, ul.rnav li a:hover {}
+
+form {
+	width: 100%;
+	box-sizing: border-box;
+
+	margin: vars.$form-margin;
+	padding: vars.$form-padding;
+}
+
+label, legend {
+	margin: vars.$form-label-margin;
+	padding: vars.$form-label-padding;
+}
+
+input, select, textarea, optgroup {
+	margin: vars.$form-item-margin;
+	padding: vars.$form-item-padding;
+	width: vars.$form-input-width;
+
+	box-sizing: border-box;
+}
+
+option {
+	margin: vars.$form-item-margin;
+	padding: vars.$form-item-padding;
+}
+
+button, [type="button"], [type="reset"], [type="submit"], .button, .chunky-button {
+	box-sizing: border-box;
+	display: inline-block;
+	width: auto;
+
+	margin: vars.$form-item-margin;
+	padding: vars.$form-item-padding;
+
+	color: vars.$primary-color-text;
+	background-color: vars.$primary-color;
+	border-style: none;
+
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	line-height: vars.$button-line-height;
+}
+
+button:hover, [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover, .button:hover, .chunky-button:hover {
+	color: vars.$primary-color-text;
+	background-color: vars.$highlight-color;
+}
+
+[type="checkbox"], [type="radio"] {
+	width: auto;
+
+	margin: vars.$form-item-margin;
+	padding: vars.$form-item-padding;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	display: inline-block;
+
+	margin: vars.$form-item-margin;
+	padding: vars.$form-item-padding;
+}
+
+[type="color"] {
+	background-color: vars.$lightmode-bg;
+	box-sizing: content-box;
+	display: inline-block;
+	height: vars.$x9unit;
+	border: 0;
+
+	margin: vars.$form-item-margin;
+	padding: 0; // Colour type is weird so it needs 0 padding
+	width: vars.$form-input-width;
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="color"] {
+		background-color: vars.$darkmode-bg;
+    }
+}

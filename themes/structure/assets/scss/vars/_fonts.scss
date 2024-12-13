@@ -1,0 +1,11 @@
+@use "units";
+
+$font-stack: Helvetica, sans-serif;
+
+$pre-font-stack: 'Courier New', Courier, monospace;
+
+$line-height: units.$x6unit;
+
+$pre-line-height: units.$x5unit;
+
+$button-line-height: units.$x5unit;

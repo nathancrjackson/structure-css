@@ -1,0 +1,179 @@
+@use "vars";
+
+// _flex.scss
+// ----------
+// Provides a 12 column system based on flex
+
+//start of if using flex
+@if vars.$include-flex == true {
+
+.fx-cont, .fx-cont12 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.fx-s1, div.fx-s2, div.fx-s3, div.fx-s4, div.fx-s5, div.fx-s6,
+div.fx-s7, div.fx-s8, div.fx-s9, div.fx-s10, div.fx-s11, div.fx-s12, 
+div.fx-m1, div.fx-m2, div.fx-m3, div.fx-m4, div.fx-m5, div.fx-m6,
+div.fx-m7, div.fx-m8, div.fx-m9, div.fx-m10, div.fx-m11, div.fx-m12, 
+div.fx-l1, div.fx-l2, div.fx-l3, div.fx-l4, div.fx-l5, div.fx-l6,
+div.fx-l7, div.fx-l8, div.fx-l9, div.fx-l10, div.fx-l11, div.fx-l12,
+div.fx-sshrink, div.fx-sauto, div.fx-mshrink, div.fx-mauto, div.fx-lshrink, div.fx-lauto {
+    width: 100%;
+	margin: 0;
+	padding: 0 !important; // Padding has to be 0 for flex to work
+	flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: vars.$small-max) {
+	div.fx-s1 {
+		width: calc(100% / 12);
+	}
+	div.fx-s2 {
+		width: calc(100% / 6);
+	}
+	div.fx-s3 {
+		width: 25%;
+	}
+	div.fx-s4 {
+		width: calc(100% / 3);
+	}
+	div.fx-s5 {
+		width: calc(calc(100% / 12) * 5);
+	}
+	div.fx-s6 {
+		width: 50%;
+	}
+	div.fx-s7 {
+		width: calc(calc(100% / 12) * 7);
+	}
+	div.fx-s8 {
+		width: calc(100% - calc(100% / 3));
+	}
+	div.fx-s9 {
+		width: 75%;
+	}
+	div.fx-s10 {
+		width: calc(100% - calc(100% / 6));
+	}
+	div.fx-s11 {
+		width: calc(100% - calc(100% / 12));
+	}
+	div.fx-s12 {
+		width: 100%;
+	}
+	div.fx-sshrink {
+		width: auto;
+		max-width: 100%;
+	}
+	div.fx-sauto {
+		width: auto;
+		flex-basis: 0px;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
+
+@media screen and (min-width: vars.$medium-min) {
+	div.fx-m1 {
+		width: calc(100% / 12);
+	}
+	div.fx-m2 {
+		width: calc(100% / 6);
+	}
+	div.fx-m3 {
+		width: 25%;
+	}
+	div.fx-m4 {
+		width: calc(100% / 3);
+	}
+	div.fx-m5 {
+		width: calc(calc(100% / 12) * 5);
+	}
+	div.fx-m6 {
+		width: 50%;
+	}
+	div.fx-m7 {
+		width: calc(calc(100% / 12) * 7);
+	}
+	div.fx-m8 {
+		width: calc(100% - calc(100% / 3));
+	}
+	div.fx-m9 {
+		width: 75%;
+	}
+	div.fx-m10 {
+		width: calc(100% - calc(100% / 6));
+	}
+	div.fx-m11 {
+		width: calc(100% - calc(100% / 12));
+	}
+	div.fx-m12 {
+		width: 100%;
+	}
+	div.fx-mshrink {
+		width: auto;
+		max-width: 100%;
+	}
+	div.fx-mauto {
+		width: auto;
+		flex-basis: 0px;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
+
+@media screen and (min-width: vars.$large-min) {
+	div.fx-l1 {
+		width: calc(100% / 12);
+	}
+	div.fx-l2 {
+		width: calc(100% / 6);
+	}
+	div.fx-l3 {
+		width: 25%;
+	}
+	div.fx-l4 {
+		width: calc(100% / 3);
+	}
+	div.fx-l5 {
+		width: calc(calc(100% / 12) * 5);
+	}
+	div.fx-l6 {
+		width: 50%;
+	}
+	div.fx-l7 {
+		width: calc(calc(100% / 12) * 7);
+	}
+	div.fx-l8 {
+		width: calc(100% - calc(100% / 3));
+	}
+	div.fx-l9 {
+		width: 75%;
+	}
+	div.fx-l10 {
+		width: calc(100% - calc(100% / 6));
+	}
+	div.fx-l11 {
+		width: calc(100% - calc(100% / 12));
+	}
+	div.fx-l12 {
+		width: 100%;
+	}
+	div.fx-lshrink {
+		width: auto;
+		max-width: 100%;
+	}
+	div.fx-lauto {
+		width: auto;
+		flex-basis: 0px;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
+
+//end of if using flex
+}

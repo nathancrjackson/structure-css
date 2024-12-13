@@ -1,0 +1,20 @@
+{{- define "main" }}
+		<div class="body-blck">
+			<div class="body-cont">
+				<div class="fx-cont">
+{{ partial "partials/content-heading.html" . }}
+					<div class="fx-s12">
+{{ if isset .Params "contentwrapperclass" }}
+						<div class="{{ .Params.contentwrapperclass }}">
+{{ else }}
+						<div class="m-x2 p-x0">
+{{ end }}
+<!-- content -->
+{{ .Content }}
+<!-- /content -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{{ end -}}

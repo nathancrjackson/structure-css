@@ -1,0 +1,39 @@
+@use "units";
+
+$body-margin: 0 auto;
+
+$heading-margin: units.$x3unit 0 units.$x1unit 0;
+$heading-padding: 0;
+$heading-width: 100%;
+
+$text-margin: units.$x1unit 0 units.$x1unit 0;
+$text-padding: 0;
+$text-width: 100%;
+
+$ul-margin: units.$x1unit 0;
+$ul-padding: 0;
+
+$li-margin: 0;
+$li-padding: units.$x3unit units.$x2unit;
+
+$table-margin: units.$x2unit 0 units.$x1unit 0;
+$table-padding: 0;
+$table-width: 100%;
+
+//$table-cell-margin will not affect layout
+$table-cell-padding: units.$x2unit units.$x1unit;
+
+$pre-margin: units.$x2unit 0;
+$pre-padding: units.$x2unit;
+$pre-width: 100%;
+
+$form-margin: units.$x2unit 0;
+$form-padding: 0;
+
+$form-item-margin: units.$x2unit 0;
+$form-item-padding: units.$x2unit;
+
+$form-input-width: 100%;
+
+$form-label-margin: 0px;
+$form-label-padding: 0px;

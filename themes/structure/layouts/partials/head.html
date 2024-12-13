@@ -1,0 +1,21 @@
+		<meta charset="utf-8">
+		<title>{{ .Title }} // {{ site.Title }}</title>
+		<meta name="description" content="{{ .Description }}">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{- if hugo.IsServer }}
+
+{{- $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" -}}
+{{ with resources.Get "scss/structure.scss" | toCSS $opts | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}
+
+{{ else }}
+
+{{- $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" -}}
+{{ with resources.Get "scss/structure.scss" | toCSS $opts| fingerprint }}
+		<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}
+
+{{ end }}

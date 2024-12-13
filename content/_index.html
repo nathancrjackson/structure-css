@@ -1,0 +1,233 @@
+---
+title: "Demo Site"
+description: "A simple demo of Structure.CSS with no bells or whistles"
+---
+
+<div class="fx-cont">
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<p>This website is an example of how structure is rendered. Yes I am aware it looks terrible, it has no custom CSS. You will need to bring to BYO jazz for your site. If you have dark mode enabled in your browser you should be noticing that support for that is baked in.</p>
+		</div>
+	</div>
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<h2>Being basic is the aim of the game</h2>
+			<p>There's not really much to say, it's a simple framework for me to get websites up and running quickly. This demo was more basic but my wife took a cheeky peak at it and made fun of it so now this is what you get.</p>
+		</div>
+	</div>
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<h3>We have a 12 column flex system</h3>
+			<p>As is the standard for most frameworks we have a 12 column system which is implemented via flex divs. Here is a demo of it:</p>
+		</div>
+	</div>
+</div>
+
+<div class="fx-cont">
+	<div class="fx-m6 fx-l4">
+		<div class="mx-x1 px-x0">
+			<p><span class="only-s">12/12 flex span for small</span><span class="only-m">6/12 flex span for medium</span><span class="only-l">4/12 flex span for large</span></p>
+		</div>
+	</div>
+	<div class="fx-m6 fx-l4">
+		<div class="mx-x1 px-x0">
+			<p><span class="only-s">12/12 flex span for small</span><span class="only-m">6/12 flex span for medium</span><span class="only-l">4/12 flex span for large</span></p>
+		</div>
+	</div>
+	<div class="fx-m6 fx-l4">
+		<div class="mx-x1 px-x0">
+			<p><span class="only-s">12/12 flex span for small</span><span class="only-m">6/12 flex span for medium</span><span class="only-l">4/12 flex span for large</span></p>
+		</div>
+	</div>
+</div>
+
+<div class="fx-cont">
+	<div class="fx-mshrink">
+		<div class="mx-x1 px-x0">
+			<p><span class="only-s">full width when small</span><span class="only-m">shrink flex span for medium</span><span class="only-l">shrink flex span for medium</span></p>
+		</div>
+	</div>
+	<div class="fx-mauto">
+		<div class="mx-x1 px-x0">
+			<p><span class="only-s">full width when small</span><span class="only-m">auto flex span for medium</span><span class="only-l">auto flex span for medium</span></p>
+		</div>
+	</div>
+	<div class="fx-lshrink">
+		<div class="mx-x1 px-x0">
+			<p><span class="hide-l">full width when not large</span><span class="only-l">shrink flex span for large</span></p>
+		</div>
+	</div>
+</div>
+
+<div class="gd-cont">
+	<div class="gd-sauto">
+		<div class="mx-x1 px-x0">
+			<h3>We also have a grid system</h3>
+			<p>By default our grid container is the standard 12 wide grid we see in most systems. There is a 10 wide option but as 12 works better for this demo here that is:</p>
+			<div class="gd-cont">
+				<div class="gd-sauto gd-m6 gd-l4">
+					<p><span class="only-s">12/12 grid span for small</span><span class="only-m">6/12 grid span for medium</span><span class="only-l">4/12 grid span for large</span></p>
+				</div>
+				<div class="gd-sauto gd-m6 gd-l4">
+					<p><span class="only-s">12/12 grid span for small</span><span class="only-m">6/12 grid span for medium</span><span class="only-l">4/12 grid span for large</span></p>
+				</div>
+				<div class="gd-sauto gd-m6 gd-l4">
+					<p><span class="only-s">12/12 grid span for small</span><span class="only-m">6/12 grid span for medium</span><span class="only-l">4/12 grid span for large</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fx-cont">
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<h3>Flex vs Grid system</h3>
+			<h4>Flex</h4>
+			<p><strong>Pro:</strong> Can have shrink/expand columns<br><strong>Con:</strong> Padding on columns can cause frustrating UI artifacts</p>
+			<h4>Grid</h4>
+			<p><strong>Pro:</strong> A bit harder to cause UI artifacts with<br><strong>Con:</strong> Is very much a 12 or 10 column system</p>
+			<h4>My recommendation</h4>
+			<p>If you don't mind having an extra div between your column div and it's content that handles padding and margins go with Flex. Check out the source of this page to get an idea what this looks like.</p>
+		</div>
+	</div>
+</div>
+
+<div class="fx-cont">
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<h3>Do you use tables often?</h3>
+			<p>Neither do I, but occasionally they are required. With that in mind here is an example table that collapses down on small screeens:</p>
+			<table class="collapsable decorated-table">
+				<tr class="hide-s">
+					<th>Name</th>
+					<th>Date</th>
+					<th>Size</th>
+				</tr>
+				<tr>
+					<td class="bold-s">Ubuntu Server.iso</td>
+					<td>0.9GB</td>
+					<td class="hide-s">20XX-04-01 09:41:43</td>
+				</tr>
+				<tr>
+					<td class="bold-s">Windows 10.iso</td>
+					<td>4.6GB</td>
+					<td class="hide-s">20XX-09-01 09:41:39</td>
+				</tr>
+				<tr>
+					<td class="bold-s">ISO to USB.exe</td>
+					<td>1.0MB</td>
+					<td class="hide-s">20XX-10-13 06:17:23</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="fx-cont">
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<h3>An example of a pre block</h3>
+			<pre>pre {
+	display: block;
+	line-height: 1.25rem;
+	white-space: pre-wrap;
+	margin: 8px;
+	padding: 8px;
+	font-family: $pre-font-stack;
+	color: $darker-color;
+	background-color: $lighter-color;
+}</pre>
+		</div>
+	</div>
+</div>
+
+<div class="fx-cont">
+	<div class="fx-s12">
+		<div class="mx-x1 px-x0">
+			<h3>How about forms?</h3>
+			<p>Ok so forms are a work in progress. Here is an example form for me to test with.</p>
+			<h4>Fake human questions form</h4>
+		</div>
+	</div>
+</div>
+<div class="fx-cont">
+	<form class="fx-s12">
+		<!-- don't need margin or padding here -->
+		<div class="fx-cont">
+			<div class="fx-m6">
+				<div class="mx-x1 px-x0">
+					<label for="firstname-input">First name
+						<input type="text" id="firstname-input" placeholder="Boots">
+					</label>
+				</div>
+			</div>
+			<div class="fx-m6">
+				<div class="mx-x1 px-x0">
+					<label for="lastname-input">Last name
+						<input type="text" id="lastname-input" placeholder="Snootington">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="fx-cont">
+			<div class="fx-m3">
+				<div class="mx-x1 px-x0">
+					<label>Pick an option
+						<select>
+							<option value="1">First option</option>
+							<option value="2">Second option</option>
+							<option value="3">Third option</option>
+							<option value="4">Other</option>
+						</select>
+					</label>
+				</div>
+			</div>
+			<div class="fx-m3">
+				<div class="mx-x1 px-x0">
+					<label>Favourite colour
+						<input type="color" name="fav-color">
+					</label>
+				</div>
+			</div>
+			<div class="fx-m6">
+				<div class="mx-x1 px-x0">
+					<legend>Preference</legend>
+					<input type="radio" name="radio-input" value="Left" id="radio-left" required><label for="radio-left">Left</label>
+					<input type="radio" name="radio-input" value="Middle" id="radio-middle"><label for="radio-middle">Middle</label>
+					<input type="radio" name="radio-input" value="Right" id="radio-right"><label for="radio-right">Right</label>
+				</div>
+			</div>
+		</div>
+		<div class="fx-cont">
+			<div class="fx-s12">
+				<div class="mx-x1 px-x0">
+					<label>Tell us something about yourself
+					<textarea placeholder=""></textarea>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="fx-cont">
+			<div class="fx-s12">
+				<div class="mx-x1 px-x0">
+					<input id="checkbox-tcs-input" type="checkbox"><label for="checkbox-tcs-input" class="no-py">I agree to terms and conditions</label>
+				</div>
+			</div>
+			<div class="fx-s12">
+				<div class="mx-x1 px-x0">
+					<input id="checkbox-news-input" type="checkbox"><label for="checkbox-news-input" class="no-py">I would like to sign up to your newsletter</label>
+				</div>
+			</div>
+		</div>
+		<div class="fx-cont">
+			<div class="fx-s12">
+				<div class="mx-x1 px-x0">
+					<button onclick="console.log('Cheeky submit')">Submit</button>
+					<input type="button" onclick="console.log('Cheeky cancel')" value="Cancel">
+					<a href="#" class="button" onclick="console.log('Cheeky reset')">Reset</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

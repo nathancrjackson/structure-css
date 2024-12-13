@@ -1,0 +1,48 @@
+// BASE UNITS
+
+$x1unit: 4px;
+$x2unit: calc($x1unit * 2);
+$x3unit: calc($x1unit * 3);
+$x4unit: calc($x1unit * 4);
+$x5unit: calc($x1unit * 5);
+$x6unit: calc($x1unit * 6);
+$x7unit: calc($x1unit * 7);
+$x8unit: calc($x1unit * 8);
+$x9unit: calc($x1unit * 9);
+$x10unit: calc($x1unit * 10);
+$x11unit: calc($x1unit * 11);
+$x12unit: calc($x1unit * 11);
+
+// QUERY UNITS
+
+//Breakpoints "in pixels" 
+$small2medium: 960;
+$medium2large: 1200;
+
+@function px2em($pixels) {
+	$ratio: 16;
+ 	@return calc(calc($pixels / $ratio) * 1em);
+}
+
+$small-min: 0em;
+$small-max: px2em($small2medium - 1);
+
+$medium-min: px2em($small2medium);
+$medium-max: px2em($medium2large - 1);
+
+$large-min: px2em($medium2large);
+
+// Borrowed from Foundation https://get.foundation/sites/docs/media-queries.html
+// Small only - @media screen and (max-width: $small-max) {}
+// Medium and up - @media screen and (min-width: $medium-min) {}
+// Medium only - @media screen and (min-width: $medium-min) and (max-width: $medium-max) {}
+// Medium and below - @media screen and (max-width: $medium-max) {}
+// Large and up - @media screen and (min-width: $large-min) {}
+// Large only - @media screen and (min-width: $large-min) and (max-width: $large-max) {}
+// Large and below - @media screen and (max-width: $large-max) {}
+// Extra large - @media screen and (min-width: $xlarge-min) {}
+
+// UNUSED FACILITY FOR EXTRA LARGE SCREEN SUPPORT
+//$large-max: px2em($large2xlarge - 1);
+//$large2xlarge: 1600;
+//$xlarge-min: px2em($large2xlarge);

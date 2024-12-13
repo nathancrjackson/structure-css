@@ -1,0 +1,5 @@
+baseURL = 'https://njit.io/projects/structure-css/'
+languageCode = 'en-us'
+title = 'Structure.CSS'
+theme = 'structure'
+timeZone = "Australia/Melbourne"

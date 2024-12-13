@@ -1,5 +1,12 @@
-@import "variables";
-@import "queries";
+@use "vars";
+
+
+// _grids.scss
+// -----------
+// Provides a 10 or 12 column system based on grids
+
+//start of if using grid
+@if vars.$include-grid == true {
 
 .gd-cont, .gd-cont12 {
   display: grid;
@@ -45,18 +52,11 @@ div.gd-m1, div.gd-m2, div.gd-m3, div.gd-m4, div.gd-m5, div.gd-m6,
 div.gd-m7, div.gd-m8, div.gd-m9, div.gd-m10, div.gd-m11, div.gd-m12, 
 div.gd-l1, div.gd-l2, div.gd-l3, div.gd-l4, div.gd-l5, div.gd-l6,
 div.gd-l7, div.gd-l8, div.gd-l9, div.gd-l10, div.gd-l11, div.gd-l12 {
-	padding: 0.5rem;
+	margin: 0;
+	padding: 0;
 }
 
-.disable-padding {
-	padding: 0 !important;
-}
-
-.disable-children-padding > * {
-	padding: 0 !important;
-}
-
-@media screen and (max-width: $small-max) {
+@media screen and (max-width: vars.$small-max) {
 	div.gd-s1 {
 		grid-column: span 1;
 	}
@@ -95,7 +95,7 @@ div.gd-l7, div.gd-l8, div.gd-l9, div.gd-l10, div.gd-l11, div.gd-l12 {
 	}
 }
 
-@media screen and (min-width: $medium-min) {
+@media screen and (min-width: vars.$medium-min) {
 	div.gd-m1 {
 		grid-column: span 1;
 	}
@@ -134,7 +134,7 @@ div.gd-l7, div.gd-l8, div.gd-l9, div.gd-l10, div.gd-l11, div.gd-l12 {
 	}
 }
 
-@media screen and (min-width: $large-min) {
+@media screen and (min-width: vars.$large-min) {
 	div.gd-l1 {
 		grid-column: span 1;
 	}
@@ -171,4 +171,7 @@ div.gd-l7, div.gd-l8, div.gd-l9, div.gd-l10, div.gd-l11, div.gd-l12 {
 	div.gd-l12 {
 		grid-column: span 12;
 	}
+}
+
+//end of if using grid
 }
