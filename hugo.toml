@@ -3,3 +3,5 @@ languageCode = 'en-us'
 title = 'Structure.CSS'
 theme = 'structure'
 timeZone = "Australia/Melbourne"
+
+disableKinds = ["taxonomy", "RSS", "sitemap", "robotsTXT", "404"]

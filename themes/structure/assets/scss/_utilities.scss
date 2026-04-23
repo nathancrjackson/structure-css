@@ -56,19 +56,18 @@ table.no-table-border tr, table.no-table-border th, table.no-table-border td
 	display: none !important;
 }
 
-@media screen and (max-width: vars.$small-max) {
-	.hide-s {
-		display: none !important;
-	}
-	.bold-s {
-		font-weight: bold;
-	}
-	.italic-s {
-		font-style: italic;
-	}
+// Mobile-first visibility and styling
+.hide-s {
+	display: none !important;
+}
+.bold-s {
+	font-weight: bold;
+}
+.italic-s {
+	font-style: italic;
 }
 
-@media screen and (min-width: vars.$medium-min) and (max-width: vars.$medium-max) {
+@media screen and (min-width: vars.$medium-min) {
 	.hide-m {
 		display: none !important;
 	}
@@ -77,6 +76,11 @@ table.no-table-border tr, table.no-table-border th, table.no-table-border td
 	}
 	.italic-m {
 		font-style: italic;
+	}
+
+	// .only-s hides on medium and up
+	.only-s {
+		display: none !important;
 	}
 }
 
@@ -90,20 +94,21 @@ table.no-table-border tr, table.no-table-border th, table.no-table-border td
 	.italic-l {
 		font-style: italic;
 	}
-}
 
-@media screen and (min-width: vars.$medium-min) {
-	.only-s {
-		display: none !important;
-	}
-}
-
-@media screen and (max-width: vars.$small-max), screen and (min-width: vars.$large-min) {
+	// .only-m hides on large and up
 	.only-m {
 		display: none !important;
 	}
 }
 
+// .only-m also needs to be hidden on small
+@media screen and (max-width: vars.$small-max) {
+	.only-m {
+		display: none !important;
+	}
+}
+
+// .only-l needs to be hidden on small and medium
 @media screen and (max-width: vars.$medium-max) {
 	.only-l {
 		display: none !important;

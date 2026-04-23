@@ -1,6 +1,6 @@
 ---
 title: "The Flex system"
-description: "A 12 column system implemented with flex"
+description: "A 12 column system and a shrink/auto row system implemented with flex"
 weight: 50
 ---
 
@@ -8,11 +8,11 @@ weight: 50
 
 ### .fx-cont
 
-Grid container with 12 even columns
+Flex container with 12 even columns along the X axis
 
 ### .fx-{x}{num}
 
-Where _{x}_ is the screen size and _{num}_ is the column width. Here is a table with all of the options:
+Where _{x}_ is the screen size and _{num}_ is the column width inside of an fx-cont element. Here is a table with all of the options:
 
 |   | Small | Medium | Large |
 |---|---|---|---|
@@ -31,11 +31,23 @@ Where _{x}_ is the screen size and _{num}_ is the column width. Here is a table 
 
 ### .fx-sshrink, .fx-mshrink, .fx-lshrink
 
-Have the column for its respective size shrink to be only the size it needs to be
+Have the column for its respective size inside of an fx-cont element shrink to be only the size it needs to be
 
 ### .fx-sauto, .fx-mauto, .fx-lauto
 
-Have the column for its respective size expand to fit the size available to it
+Have the column for its respective size inside of an fx-cont element expand to fit the size available to it
+
+### .fxy-cont
+
+Flex container along the Y axis
+
+### .fxy-shrink
+
+Have the row for its respective size inside of an fxy-cont element shrink to be only the size it needs to be
+
+### .fxy-auto
+
+Have the row for its respective size inside of an fxy-cont element expand to fit the size available to it
 
 ## Examples
 
@@ -63,4 +75,20 @@ Have the column for its respective size expand to fit the size available to it
 		<p>I span the full width of a small screen but expand on a medium or larger screen</p>
 	</div>
 </div>
+```
+
+### Shrink/expand row
+
+```html
+<body class="fxy-cont">
+	<header class="fxy-shrink">
+		<p>I am just the height that I need to be</p>
+	</header>
+	<main class="fxy-auto">
+		<p>I grow to fill the height if space is available</p>
+	</main>
+	<footer class="fxy-shrink">
+		<p>I am just the height that I need to be</p>
+	</footer>
+</body>
 ```

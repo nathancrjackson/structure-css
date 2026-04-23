@@ -1,0 +1,45 @@
+@use "vars";
+
+// cssvars.scss
+// ----------
+// Includes all of the css variables were going to use for lightmode/darkmode
+
+// color: var(--body-color);
+
+:root {
+	--body-color: #{vars.$lightmode-fg};
+	--body-bg-color: #{vars.$lightmode-bg};
+
+	--a-color: #{vars.$primary-color};
+	--a-hover-color: #{vars.$highlight-color};
+	--a-active-color: #{vars.$highlight-color};
+	--disabled-color: #{vars.$lightmode-disabled-color};
+
+	--pre-color: #{vars.$pre-dark-color};
+	--pre-bg-color: #{vars.$pre-light-color};
+
+	--table-thin-color: #{vars.$dark-color};
+	--table-thick-color: #{vars.$darker-color};
+
+	--formcolor-bg-color: #{vars.$lightmode-bg};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-color: #{vars.$darkmode-fg};
+		--body-bg-color: #{vars.$darkmode-bg};
+
+        --a-color: #{vars.$primary-color};
+        --a-hover-color: #{vars.$highlight-color};
+        --a-active-color: #{vars.$highlight-color};
+        --disabled-color: #{vars.$darkmode-disabled-color};
+
+		--pre-color: #{vars.$pre-light-color};
+		--pre-bg-color: #{vars.$pre-dark-color};
+
+		--table-thin-color: #{vars.$light-color};
+		--table-thick-color: #{vars.$lighter-color};
+
+		--formcolor-bg-color: #{vars.$darkmode-bg};
+	}
+}

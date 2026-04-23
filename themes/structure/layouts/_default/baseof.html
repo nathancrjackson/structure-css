@@ -3,14 +3,14 @@
 	<head>
 {{ partial "head.html" . }}
 	</head>
-	<body>
-		<header>
+	<body class="fxy-cont">
+		<header class="fxy-shrink">
 {{ partial "header.html" . }}
 		</header>
-		<main>
+		<main class="fxy-auto">
 {{ block "main" . }}{{ end }}
 		</main>
-		<footer>
+		<footer class="fxy-shrink">
 {{ partial "footer.html" . }}
 		</footer>
 	</body>

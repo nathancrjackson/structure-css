@@ -4,10 +4,11 @@ $darker-color: #1a1a1a;
 $light-color: #e6e6e6;
 $lighter-color: #fafafa;
 
-$primary-color: #3598E8;
-$primary-color-text: $light-color;
-$highlight-color: #51a6ec;
-$disabled-color: #888888;
+$primary-color: #1676C5; //#3598E8;
+$primary-color-text: $lighter-color;
+$highlight-color: #007B94;
+$lightmode-disabled-color: #737373;
+$darkmode-disabled-color: #969696;
 
 $lightmode-fg: $dark-color;
 $lightmode-bg: $lighter-color;

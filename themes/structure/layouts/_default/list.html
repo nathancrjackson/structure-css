@@ -2,7 +2,7 @@
 		<div class="body-blck">
 			<div class="body-cont">
 				<div class="fx-cont">
-{{ partial "partials/content-heading.html" . }}
+{{ partial "content-heading.html" . }}
 {{ if ne .Content "" }}
 					<div class="fx-s12">
 {{ if isset .Params "contentwrapperclass" }}
@@ -30,7 +30,7 @@
 						<div class="m-x1 p-x0">
 
 <!-- sub-contentlist -->
-{{ partial "partials/subcontent-list.html" . }}
+{{ partial "subcontent-list.html" . }}
 <!-- /sub-contentlist -->
 
 						</div>

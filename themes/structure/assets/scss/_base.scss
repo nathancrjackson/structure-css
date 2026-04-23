@@ -7,28 +7,23 @@
 body {
 	font: 100% vars.$font-stack;
 
-	/* Light Mode */
-	color: vars.$lightmode-fg;
-	background-color: vars.$lightmode-bg;
-}
+	// I don't see a reason why this shouldn't always be the case
+	min-height: 100vh;
 
-@media (prefers-color-scheme: dark) {
-    body {
-		color: vars.$darkmode-fg;
-		background-color: vars.$darkmode-bg;
-    }
+	color: var(--body-color);
+	background-color: var(--body-bg-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: vars.$heading-margin;
-	padding: vars.$heading-margin;
+	padding: vars.$heading-padding;
 	width: vars.$heading-width;
 	line-height: vars.$line-height;
 }
 
 p {
 	margin: vars.$text-margin;
-	padding: vars.$text-margin;
+	padding: vars.$text-padding;
 	width: vars.$text-width;
 	line-height: vars.$line-height;
 }
@@ -40,54 +35,61 @@ pre {
 	margin: vars.$pre-margin;
 	padding: vars.$pre-padding;
 	font-family: vars.$pre-font-stack;
-	color: vars.$pre-dark-color;
-	background-color: vars.$pre-light-color;
+	color: var(--pre-color);
+	background-color: var(--pre-bg-color);
 }
 
 .code {
-	border-left: 4px solid vars.$primary-color;
-}
-
-@media (prefers-color-scheme: dark) {
-    pre {
-		color: vars.$pre-light-color;
-		background-color: vars.$pre-dark-color;
-    }
+	border-left: vars.$x1unit solid vars.$primary-color;
 }
 
 a {
-	color: vars.$primary-color;
+	color: var(--a-color);
 }
 
 a:hover {
-	//text-shadow: 1px 1px $highlight-color;
-	color: vars.$highlight-color;
+	color: var(--a-hover-color);
 }
 
 *.active {
-	color: vars.$highlight-color;
+	color: var(--a-active-color);
 }
 
 *.active a {
-	color: vars.$highlight-color;
+	color: var(--a-active-color);
 }
 
 *.active a:hover {
 	//text-shadow: none;
-	color: vars.$highlight-color;
+	color: var(--a-active-color);
 }
 
-*.disabled {
-	color: vars.$disabled-color;
+// Active states for tactile feedback
+a:active,
+button:active,
+[type="button"]:active,
+[type="reset"]:active,
+[type="submit"]:active,
+.button:active,
+.chunky-button:active {
+	transform: scale(0.98);
 }
 
-*.disabled a {
-	color: vars.$disabled-color;
-}
-
-*.disabled a:hover {
+*.disabled, *.disabled a, *.disabled a:hover {
 	//text-shadow: none;
-	color: vars.$disabled-color;
+	color: var(--disabled-color);
+}
+
+// Focus states for accessibility
+a:focus-visible,
+button:focus-visible,
+[type="button"]:focus-visible,
+[type="reset"]:focus-visible,
+[type="submit"]:focus-visible,
+.button:focus-visible,
+.chunky-button:focus-visible {
+	outline: 2px solid var(--a-color);
+	outline-offset: 2px;
 }
 
 table {
@@ -100,37 +102,23 @@ table {
 
 @media screen and (max-width: vars.$small-max) {
 	table.collapsable tr {
-		border: 1px solid vars.$dark-color;
+		border: vars.$borderthin solid var(--table-thin-color);
 	}
 	table.collapsable th, table.collapsable td {
 		border: 0;
 		display: block;
 	}
 
-	@media (prefers-color-scheme: dark) {
-		table.collapsable tr {
-			border: 1px solid vars.$light-color;
-		}
-	}
 }
 
 td, th {
 	//margin has no power here
 	padding: vars.$table-cell-padding;
-	border: 1px solid vars.$dark-color;
+	border: vars.$borderthin solid var(--table-thin-color);
 }
 
 th {
-    border-bottom: 2px solid vars.$darker-color;
-}
-
-@media (prefers-color-scheme: dark) {
-    td, th {
-        border: 1px solid vars.$light-color;
-    }
-    th {
-        border-bottom: 2px solid vars.$light-color;
-    }
+    border-bottom: vars.$borderthick solid var(--table-thick-color);
 }
 
 .body-blck {
@@ -153,7 +141,13 @@ ul.vnav, ul.hnav, ul.rnav {
 	padding: vars.$ul-padding;
 
 	list-style-type: none;
-	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+ul.hnav {
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 ul.vnav li, ul.rnav li, ul.hnav li {
@@ -161,13 +155,10 @@ ul.vnav li, ul.rnav li, ul.hnav li {
 	padding: vars.$li-padding;
 }
 
-ul.hnav li {
-	float: left;
-}
-
 @media screen and (min-width: vars.$medium-min) {
-	ul.rnav li {
-		float: left;
+	ul.rnav {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }
 
@@ -197,6 +188,10 @@ input, select, textarea, optgroup {
 	width: vars.$form-input-width;
 
 	box-sizing: border-box;
+
+	color: var(--body-color);
+	background-color: var(--formcolor-bg-color);
+	border: vars.$borderthin solid var(--table-thin-color);
 }
 
 option {
@@ -242,7 +237,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 }
 
 [type="color"] {
-	background-color: vars.$lightmode-bg;
+	background-color: var(--formcolor-bg-color);
 	box-sizing: content-box;
 	display: inline-block;
 	height: vars.$x9unit;
@@ -251,10 +246,4 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 	margin: vars.$form-item-margin;
 	padding: 0; // Colour type is weird so it needs 0 padding
 	width: vars.$form-input-width;
-}
-
-@media (prefers-color-scheme: dark) {
-    [type="color"] {
-		background-color: vars.$darkmode-bg;
-    }
 }

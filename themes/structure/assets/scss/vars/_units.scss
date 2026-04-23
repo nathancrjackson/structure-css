@@ -1,6 +1,9 @@
+@use "sass:math";
+
 // BASE UNITS
 
-$x1unit: 4px;
+$x0unit: 0;
+$x1unit: 0.25rem;
 $x2unit: calc($x1unit * 2);
 $x3unit: calc($x1unit * 3);
 $x4unit: calc($x1unit * 4);
@@ -11,7 +14,28 @@ $x8unit: calc($x1unit * 8);
 $x9unit: calc($x1unit * 9);
 $x10unit: calc($x1unit * 10);
 $x11unit: calc($x1unit * 11);
-$x12unit: calc($x1unit * 11);
+$x12unit: calc($x1unit * 12);
+
+$spacers: (
+	0: 0,
+	1: $x1unit,
+	2: $x2unit,
+	3: $x3unit,
+	4: $x4unit,
+	5: $x5unit,
+	6: $x6unit,
+	7: $x7unit,
+	8: $x8unit,
+	9: $x9unit,
+	10: $x10unit,
+	11: $x11unit,
+	12: $x12unit,
+	auto: auto
+);
+
+// BORDER THICKNESSES
+$borderthin: math.div($x1unit, 4);
+$borderthick: math.div($x1unit, 2);
 
 // QUERY UNITS
 
@@ -20,8 +44,7 @@ $small2medium: 960;
 $medium2large: 1200;
 
 @function px2em($pixels) {
-	$ratio: 16;
- 	@return calc(calc($pixels / $ratio) * 1em);
+	@return math.div($pixels, 16) * 1em;
 }
 
 $small-min: 0em;
